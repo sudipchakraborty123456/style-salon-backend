@@ -1,6 +1,5 @@
 const salon = require('../Models/salons');
 exports.getAllSalon = (req, res) => {
-    console.log("HI!")
     salon.find().then((data) => {
         const dataLength = data.length;
         res.json(

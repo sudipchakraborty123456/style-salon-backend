@@ -37,6 +37,13 @@ const salonSchema = new schema({
     orderDetails: {
         type: Array,
         required: true
-    }
+    },
+    payment:{
+        type:String,required:true
+    },
+    confirmBooking:{
+        type:String,required:true
+    },
+    mobile:{type:String, required: true}
 });
 module.exports = mongoose.model("Orders", salonSchema, "Orders");

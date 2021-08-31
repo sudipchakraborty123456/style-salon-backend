@@ -51,14 +51,15 @@ exports.logIn = (req, res) => {
 }
 exports.signUp = (req, res) => {
     const reqBody = req.body;
-    const { email, password, firstName, lastName,type } = reqBody;
+    const { email, password, firstName, lastName,type,salonId } = reqBody;
     const userObj = new user(
         {
             email: email,
             password: password,
             firstName: firstName,
             lastName: lastName,
-            type: type
+            type: type,
+            salonId:salonId
 
         }
     );

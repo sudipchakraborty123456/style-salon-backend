@@ -4,6 +4,7 @@ const usersController = require("../controllers/users");
 const salonController = require("../controllers/salon");
 const locationController = require("../controllers/location");
 const ordersController = require("../controllers/Orders");
+const servicesController = require("../controllers/Services")
 router.post('/login',usersController.logIn)
 router.post('/signUp',usersController.signUp)
 router.get('/getAllSalons',salonController.getAllSalon);
@@ -21,5 +22,8 @@ router.get('/serviceList/:service/:id',salonController.serviceListFatch);
 router.post('/placeOrder',ordersController.saveOrder);
 router.get('/getOrders/:userId',ordersController.getOrder);
 router.post('/filterSalonsByGender&location',salonController.filterSalonsByGender);
-
+router.get('/getOrdersBySalonId/:salonId',ordersController.getOrderBySalonId);
+router.get('/confiemBooking/:orderId',ordersController.acceptBooking);
+router.get('/denyBooking/:orderId',ordersController.denyBooking);
+router.get('/getAllServicesByMainServiceId/:mainServiceId',servicesController.getAllServicesByMainServiceId);
 module.exports = router;

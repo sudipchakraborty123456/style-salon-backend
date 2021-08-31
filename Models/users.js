@@ -24,6 +24,9 @@ const userSchema = new schema({
     },
     type:{
         type:String, required:true
+    },
+    salonId:{
+        type:String,required:true
     }
 
 
