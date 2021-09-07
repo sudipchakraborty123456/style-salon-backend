@@ -138,7 +138,7 @@ orderId=req.body.orderId
     params['TXN_AMOUNT'] = amount.toString();
     params['EMAIL'] = email;
     params['MOBILE_NO'] = mobileNo.toString();
-    params['CALLBACK_URL'] = 'http://localhost:5420/api/paymentCallback';
+    params['CALLBACK_URL'] = '    https://style-salon-backend.herokuapp.com/api/paymentCallback';
     
 
 
